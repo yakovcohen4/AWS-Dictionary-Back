@@ -1,8 +1,8 @@
+const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
 const app = express();
 require('dotenv').config();
-const port = 3000;
 
 // routers
 const { searchRouter } = require('./routers/searchRouter');
@@ -18,5 +18,5 @@ app.get('/', function (req, res) {
 // searchRouter
 app.use('/', searchRouter);
 
-// start the server
-app.listen(process.env.PORT || port, () => console.log('Server is running...'));
+// export the app to the serverless framework
+module.exports.handler = serverless(app);
