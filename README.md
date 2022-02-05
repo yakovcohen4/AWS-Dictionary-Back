@@ -37,7 +37,7 @@
 
 ---
 
-## Global use - 🌎
+## Test The Server 💯-
 
 ### [My server to get JSON answers](https://moj90vlvy0.execute-api.eu-west-1.amazonaws.com/dev)
 
